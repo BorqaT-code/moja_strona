@@ -1,3 +1,11 @@
+<script>
+  const haslo = prompt("Podaj hasło:");
+  if (haslo !== "tajne123") {
+    document.body.innerHTML = "<h1>Brak dostępu</h1>";
+    throw new Error("Złe hasło");
+  }
+</script>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
