@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -11,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+    <script>
+    const haslo = prompt("Podaj hasło:");
+    if (haslo === "tajne123") {
+      window.location.href = "pulpit.html"; // <-- prawdziwa strona
+    } else {
+      document.write("<h1>Brak dostępu</h1>");
+    }
+  </script>
+
+
+
     
     <style>
         body {
@@ -80,12 +90,7 @@
     </style>
 </head>
 
-<script>
-      const haslo = prompt("Podaj hasło:");
-      if (haslo !== "tajne123") {
-        document.write("<h1>Brak dostępu</h1>");
-      } else {
-        document.write(`
+
 <body class="antialiased">
 
     <div class="min-h-screen">
@@ -699,8 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 </body>
-  `);
-      }
+
     </script>
   </head>
   <body>
