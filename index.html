@@ -1,10 +1,4 @@
-<script>
-  const haslo = prompt("Podaj hasło:");
-  if (haslo !== "tajne123") {
-    document.body.innerHTML = "<h1>Brak dostępu</h1>";
-    throw new Error("Złe hasło");
-  }
-</script>
+
 
 <!DOCTYPE html>
 <html lang="pl">
@@ -17,15 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: ProfilNet Brand Colors (#e21e23, #00549f, #58585a) -->
-    <!-- Application Structure Plan: A dashboard-style SPA with top-level navigation separating the strategy into four main pillars: 'Strategia Ogólna' (foundational brand identity), 'Klient Indywidualny (B2C)', 'Partner Biznesowy (B2B)', and 'Mierniki Sukcesu (KPIs)'. This structure was chosen because the source report's primary distinction is between B2C and B2B audiences. Separating them allows a user (e.g., a marketing manager) to focus on one strategic path at a time, preventing information overload. Within the B2C and B2B sections, a tabbed interface further organizes detailed components like Personas, Sales Funnels, and Communication Channels. This encourages exploration and makes the dense information digestible. Starting with overall strategy provides context, and ending with KPIs summarizes how success will be measured across all initiatives. -->
-    <!-- Visualization & Content Choices: 
-    - Buyer Personas: Goal: Inform/Empathize -> Viz: HTML/Tailwind cards -> Interaction: Static -> Justification: Clean, scannable layout for persona details.
-    - Sales Funnels: Goal: Organize/Show Process -> Viz: Horizontal Bar Chart (Chart.js) acting as a funnel -> Interaction: Click on a funnel stage to reveal detailed actions -> Justification: Intuitive visual for process flow; interactivity keeps the main view clean.
-    - Communication Channels: Goal: Compare/Organize -> Viz: HTML/Tailwind grid with icons -> Interaction: Hover effects -> Justification: Visually separates and and categorizes different channels for quick comprehension.
-    - Content Plan: Goal: Organize/Inform -> Viz: HTML/Tailwind accordion -> Interaction: Click to expand/collapse content ideas -> Justification: Manages a large amount of text efficiently without cluttering the UI.
-    - KPIs: Goal: Inform/Compare -> Viz: Multiple charts (Doughnut, Bar - Chart.js) in a dashboard layout -> Interaction: Hover for tooltips -> Justification: Provides a quick, scannable summary of key metrics, more engaging than a simple list. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -93,6 +79,13 @@
         }
     </style>
 </head>
+
+<script>
+      const haslo = prompt("Podaj hasło:");
+      if (haslo !== "tajne123") {
+        document.write("<h1>Brak dostępu</h1>");
+      } else {
+        document.write(`
 <body class="antialiased">
 
     <div class="min-h-screen">
@@ -706,4 +699,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 </body>
+  `);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
